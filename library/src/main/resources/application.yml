@@ -1,0 +1,25 @@
+server:
+  port: 1881
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+      properties:
+        hibernate:
+          format_sql: true
+          temp:
+            use_jdbc_metadata_defaults: false
+      show-sql: false
+
+
+
